@@ -28,6 +28,8 @@ export default defineConfig(() => ({
       "next/link": path.resolve(__dirname, "app/compat/next/link.tsx"),
       "next/navigation": path.resolve(__dirname, "app/compat/next/navigation.ts"),
       "next/script": path.resolve(__dirname, "app/compat/next/script.tsx"),
+      // Use i18n source directly so Vite bundles locale JSON files via dynamic import glob
+      "@plane/i18n": path.resolve(__dirname, "../../packages/i18n/src/index.ts"),
     },
     dedupe: ["react", "react-dom", "@headlessui/react"],
   },
